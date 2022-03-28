@@ -49,16 +49,16 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                         
                         <HeaderLinks>
                             <LinkExt>                                
-                                <Link href="https://api.whatsapp.com/send?phone=5511987877320&text=Texto%20aqui">
-                                    <a target="_blank" rel="noopener noreferrer">
+                                <Link href="">
+                                    <a>
                                         <SiWhatsapp style={{background: 'green', color:"white", padding: '5px', fontSize: '2.5rem', borderRadius: '5px'}} /> 
                                     </a>
                                 </Link>
                             </LinkExt>
 
                             <LinkExt>
-                                <Link href="https://www.linkedin.com/in/felipe-silva-99aba820a/">
-                                    <a target="_blank" rel="noopener noreferrer"> 
+                                <Link href="">
+                                    <a> 
                                         <SiTypescript color="blue" style={{background: 'white', fontSize: '2.5rem', borderRadius: '5px' }} /> 
                                     </a>
                                 </Link>                       
@@ -66,7 +66,7 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                             </LinkExt>
                           
                             <LinkExt>
-                                <Link href='mailto:felipe.tecnosuporte@gmail.com'>
+                                <Link href="">
                                     <a>
                                         <SiNextDotJs style={{background: 'black', color:'white',padding: '5px', fontSize: '2.5rem', borderRadius: '5px' }}/>
                                     </a>                       
@@ -74,8 +74,8 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                             </LinkExt>
                           
                             <LinkExt>                                
-                                <Link href="https://github.com/feliippeee">
-                                    <a target="_blank" rel="noopener noreferrer">
+                                <Link href="">
+                                    <a>
                                         <SiReact style={{color: 'blue', borderRadius: '50%', fontSize: '2.5rem'}}/>  
                                     </a>
                                 </Link>

@@ -37,7 +37,7 @@ export function Footer() {
                
                     <Link href="https://app.rocketseat.com.br/me/felipe-silva-1592460865">
                         <a target="_blank" rel="noopener noreferrer">
-                        <img width='50px' height='50px' src="logo_rocketseat.png" alt="" /> 
+                        <img width='50px' height='50px' style={{background: '#29292e', padding: '2px', borderRadius: '5px'}} src="logo_rocketseat.png" alt="" /> 
                         </a>
                     </Link>
                 </Links>

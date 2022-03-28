@@ -1,11 +1,7 @@
-import Image from 'next/image';
-import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { Main } from '../components/Main'
 import React from 'react'
-import { SiNextDotJs, SiNodeDotJs, SiReact, SiTypescript } from 'react-icons/si'
 import CardProjects from '../components/CardProjects';
-import Link from 'next/link';
 type Profile = {
   name: string;
   avatar_url: string;
