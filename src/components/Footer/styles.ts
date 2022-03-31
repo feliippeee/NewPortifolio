@@ -1,113 +1,14 @@
 import styled from "styled-components";
 export const Footers = styled.div`
-    
-.footer {
-    
-    
-
-}  
-
-@media (max-width: 1080px) {
-    .footer {
-    background: ${props => props.theme.colors.primary};
-    display: flex;
-    height: 80px;
-    margin-bottom: 0;
-    align-items: center;
-    
-        ul {
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            li {
-                font-size: 1.5rem;
-                padding: 1rem;
-                &:hover {
-                    border-radius: 1rem
-                }
-                > span {
-                    margin-right: 1rem;
-                }
-                a {
-                    font-size: 1.5rem;
-                }
-               
-            }
-        }
-    
-
-}  
-}
-
-@media (max-width: 720px) {
-    .footer {
-    background: ${props => props.theme.colors.primary};
-    display: flex;
-    height: 80px;
-    margin-bottom: 0;
-    align-items: center;
-    
-        ul {
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            li {
-                font-size: 1rem;
-                padding: 1rem;
-                &:hover {
-                    border-radius: 1rem
-                }
-                > span {
-                    margin-right: 1.5rem;
-                }
-                a {
-                    font-size: 1.5rem;
-                }
-               
-            }
-        }
-    
-
-}   
-}
-
-@media (max-width: 426px) {
-    .footer {
-    background: ${props => props.theme.colors.primary};
-    display: flex;
-    height: 80px;
-    margin-bottom: 0;
-    align-items: center;
-    
-        ul {
-            width: 100%;
-            flex-direction: column;
-            display: flex;
-            justify-content: space-evenly;
-            li {
-                font-size: 2rem;
-                padding: 1rem;
-                &:hover {
-                    border-radius: 1rem
-                }
-                > span {
-                    margin-right: 1rem;
-                }
-                a {
-                    font-size: 2rem;
-                }
-               
-            }
-        }
-    
-
-}   
-}
-`;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+    `;
 
 export const CardFooter = styled.div`
+    padding: 1rem;
     background: rgb(18, 18, 20);
-
+    width: 100%;
     //background: ${props => props.theme.colors.primary};
     display: flex;
     height: 80px;
@@ -148,6 +49,16 @@ export const CardFooter = styled.div`
            
         }
     }
+    @media (max-width: 480px) {
+        ul {
+
+            li { 
+                font-size: 1rem; 
+                
+                
+            }
+            }
+        }
 `;
 export const Dev = styled.div`
 
@@ -155,7 +66,13 @@ export const Dev = styled.div`
 
 export const Links = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 2.5rem;
     gap: 1rem;
     align-items: center;
+    @media (max-width: 480px) {
+    font-size: 1.8rem;
+    padding: 0;
+        
+    }
 `;

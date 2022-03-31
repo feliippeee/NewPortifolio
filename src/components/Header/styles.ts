@@ -1,46 +1,118 @@
 import styled from "styled-components";
 import { shade } from "polished"; //utilizar ele para hover
-export const Container = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
-background: ${props => props.theme.colors.background};
 
-header {
-position: fixed;
-background: rgb(18, 18, 20);
-width: 100%;
-height: 6.25rem;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-padding: 1rem;
-    .container {
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        justify-content: center;
-        align-items: center;
-        h1 {
-            color: white;
-        }
-       span {
-        justify-content: center;
-        display: flex;
-        font-weight: 600;
-        background: ${props => props.theme.colors.background};
-        border-radius: 1rem;
-       }
-    }
-}
+export const Container = styled.div`
+    display: flex;
+    background: ${props => props.theme.colors.background};
+
 `;
+
+export const HeaderContainer = styled.div`
+    position: fixed;
+    background: rgb(18, 18, 20);
+    width: 100%;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .container {
+        
+    }
+    @media (max-width: 480px) {
+        height: 4.25rem;
+    }
+`;
+
+export const HeaderLogo = styled.div`
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    } 
+`;
+
+export const ImageHeader = styled.div`
+    img {
+        border-radius: 50%;
+    }
+     @media (max-width: 720px) {
+     display: none;
+    }
+`;
+ 
+export const NameDev = styled.div` 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const Name = styled.h1`
+    color: white;
+    @media (max-width: 480px) {
+        text-align: center;
+        font-size: 1rem;
+        
+    }
+`;
+
+export const Profission = styled.span`
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+    padding: 0.225rem;
+    background: ${props => props.theme.colors.background};
+    border-radius: 1rem;
+    @media (max-width: 480px) {
+        font-size: 0.625rem;
+        text-align: center;
+        padding: 0.125rem;
+    }
+`;
+
 export const HeaderLinks = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
     align-items: center;
     width: 15rem;
     margin: 0 3rem;
+    @media (max-width: 770px) {
+        gap: 0.825rem;
+        margin: 0;
+    }
+    @media (max-width: 480px) {
+        gap: 0.825rem;
+        margin: 0;
+    }
 `;
 
-export const LinkExt = styled.div``;
+export const LinkExt = styled.div`
+    svg{ 
+        font-size: 2.5rem; 
+    }
+    @media (max-width: 770px) {
+        svg {
+            font-size: 2rem; 
+        }
+        img {
+            width: 35px; 
+            height: 35px;
+        }
+    }
+    @media (max-width: 480px) {
+        svg {
+            font-size: 1.8rem; 
+        }
+        img {
+            width: 35px; 
+            height: 35px;
+        }
+    
+}
+`;
+
 export const Content = styled.div`
     display: flex;
     align-items: center;
@@ -84,6 +156,10 @@ export const Content = styled.div`
 }
 
 @media (max-width: 720px) {
+   
+}
+@media (max-width: 480px) {
     
 }
 `;
+

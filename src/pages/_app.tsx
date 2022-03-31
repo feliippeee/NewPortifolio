@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   <GlobalStyle />    
     <Header toggleTheme={toggleTheme} /> 
     <Component {...pageProps} />   
-    <Footer />
     
   </ThemeProvider>
   )

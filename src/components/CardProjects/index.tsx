@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container, Projects, Title, SubTitle, ImageProject, DescriptionProject, LinkGit } from './styles';
 interface ProjectsProps {
     image: string;
+    width?: string;
+    height?: string;
     textSubtitle?: string;
     title: string;
     subTitle: string;
@@ -13,12 +16,12 @@ export default function CardProjects({image, textSubtitle, title, subTitle, link
     return (
         <Container>
             <Projects>
-                <ImageProject>
-                    <img 
+                <ImageProject
                         src={image} 
                         alt={textSubtitle} 
+                        
                         />
-                </ImageProject>
+               
                 <DescriptionProject>
 
                 <Title>{title}</Title>

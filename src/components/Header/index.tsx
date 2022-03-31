@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import Switch from 'react-switch';
+import Image  from 'next/image';
 import Link from 'next/link';
-import {Container, Content, HeaderLinks, LinkExt} from './styles';
-import { SiNextDotJs, SiTypescript, SiReact, SiWhatsapp } from "react-icons/si";
+import { FaDiscord } from 'react-icons/fa';
+import {Container, HeaderContainer, HeaderLogo, Name, Profission, ImageHeader, NameDev, Content, HeaderLinks, LinkExt} from './styles';
+import { SiNextDotJs, SiTypescript, SiReact, SiDiscord, SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 
 import { ThemeContext } from "styled-components";
@@ -17,21 +19,21 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
   
     return (
         <Container>
-            <header>
-                    <div className="container">
+            <HeaderContainer>
+                    <HeaderLogo>
                     
-                    <div>
-                        <img style={{borderRadius: '50%', width: '80px', height:'80px'}} src='https://github.com/feliippeee.png' /> 
-                    </div>
-                    <div>
-                        <h1>Felipe Marques</h1>
-                        <span>Desenvolvedor Front-end</span>                        
-                    </div> 
-                    </div>
+                    <ImageHeader>
+                        <Image width='80px' height='80px' src='https://github.com/feliippeee.png' /> 
+                    </ImageHeader>
+                    <NameDev>
+                        <Name>Felipe Marques</Name>
+                        <Profission>Desenvolvedor Front-end</Profission>                        
+                    </NameDev> 
+                    </HeaderLogo>
                 
                 <Content>
                 
-                    <nav>
+                    {/*<nav>
                     <ul>
                         <li>
                             <Switch 
@@ -45,38 +47,53 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                             />
                         </li>
                     </ul>
-                    </nav>
+    </nav>*/}
                         
                         <HeaderLinks>
                             <LinkExt>                                
-                                <Link href="">
-                                    <a>
-                                        <SiWhatsapp style={{background: 'green', color:"white", padding: '5px', fontSize: '2.5rem', borderRadius: '5px'}} /> 
+                                <Link href="https://api.whatsapp.com/send?phone=5511987877320&text=Texto%20aqui">
+                                    <a target="_blank" rel="noopener noreferrer">
+                                    <SiWhatsapp style={{background: 'green', padding: '5px', color: 'white', borderRadius: '5px'}} /> 
                                     </a>
                                 </Link>
                             </LinkExt>
 
                             <LinkExt>
-                                <Link href="">
-                                    <a> 
-                                        <SiTypescript color="blue" style={{background: 'white', fontSize: '2.5rem', borderRadius: '5px' }} /> 
+                                <Link href="https://github.com/feliippeee">
+                                    <a target="_blank" rel="noopener noreferrer">
+                                        <SiGithub style={{color: 'black', background: '#888888', borderRadius: '50%'}}/>  
                                     </a>
-                                </Link>                       
-
+                                </Link>                
                             </LinkExt>
                           
                             <LinkExt>
-                                <Link href="">
-                                    <a>
-                                        <SiNextDotJs style={{background: 'black', color:'white',padding: '5px', fontSize: '2.5rem', borderRadius: '5px' }}/>
-                                    </a>                       
-                                </Link>
+                                <Link href="https://www.linkedin.com/in/felipe-silva-99aba820a/">
+                                    <a target="_blank" rel="noopener noreferrer"> 
+                                        <SiLinkedin color="blue" style={{background: 'white', borderRadius: '5px' }} /> 
+                                    </a>
+                                </Link> 
                             </LinkExt>
                           
                             <LinkExt>                                
+                                <Link href='mailto:felipe.tecnosuporte@gmail.com'>
+                                    <a>
+                                        <SiGmail style={{background: 'white', color:'red',padding: '5px', borderRadius: '5px' }}/>
+                                    </a>                       
+                                </Link>
+                            </LinkExt>
+
+                            <LinkExt>
+                                <Link href="https://app.rocketseat.com.br/me/felipe-silva-1592460865">
+                                    <a target="_blank" rel="noopener noreferrer">
+                                    <img width='50px' height='50px' style={{background: '#29292e', padding: '2px', borderRadius: '5px'}} src="logo_rocketseat.png" alt="" /> 
+                                    </a>
+                                </Link>
+                            </LinkExt>
+
+                            <LinkExt>
                                 <Link href="">
                                     <a>
-                                        <SiReact style={{color: 'blue', borderRadius: '50%', fontSize: '2.5rem'}}/>  
+                                        <FaDiscord style={{background: 'white', color: 'blue', borderRadius: '5px'}}/>  
                                     </a>
                                 </Link>
                             </LinkExt>
@@ -84,7 +101,7 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                        
                         </HeaderLinks>
                 </Content>
-            </header>
+            </HeaderContainer>
         </Container>
         
     )
