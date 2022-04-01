@@ -9,9 +9,14 @@ export const Container = styled.div`
      :first-child {
         margin-top: 0;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 480px) {
       justify-content: center;
       width: 100%;
+      border-bottom: 2px solid #29292e;
+      :last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+      }
     }
 `;
 export const Projects = styled.div`
@@ -39,7 +44,7 @@ export const Title = styled.text`
     padding: 1rem;
     margin: 1rem 1rem 5px 1rem;
     @media (max-width: 480px) {
-        margin: 0;
+        margin: 0 1rem;
     }
 `;
 
@@ -55,26 +60,54 @@ export const LinkGit = styled.div`
     text-align: center;
     margin: 2rem 0;
     transition: 0.5s;
+    width: 100%;
+    
     a {
         background: #29292e;
-        padding: 1rem 8rem;
         color: white;
+        padding: 1rem 7rem;
         &:hover {
             background: #444;
             
 
         }
+
+    }
+    
+    @media (max-width: 330px){
+        a {
+            padding: 1rem 5rem;
+        }
+    }
+    @media (max-width: 425px) {
+        a {
+            padding: 1rem 6rem;
+        }
+    }
+    @media (max-width: 480px) {
+        a { 
+            padding: 1rem 7rem;
+    }
     }
 `;
+
+export const CardImageProject = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 export const ImageProject = styled.img`
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     img {
-        width: 100%;
-        height: 100%;
+        width: 95%;
+        height: 95%;
         object-fit: fill;
         border-radius: 5px;
         
+    }
+    @media (max-width: 480px) {
+       
     }
     
 `;

@@ -29,7 +29,7 @@ button {
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 770px) {
     html {
         font-size: 87.5%;
     }
@@ -39,6 +39,12 @@ button {
         font-size: 40%;
       }
     }
+
+@media (max-width: 350px) {
+  html {
+    font-size: 24%;
+  }
+}    
     
 }
 

@@ -1,7 +1,7 @@
 import { SiWhatsapp, SiTypescript, SiReact, SiNextDotJs, SiDiscord} from "react-icons/si";
 import { BiDevices } from "react-icons/bi";
 
-import { Footers, Links, CardFooter } from "./styles"
+import { Footers, Links, DevCreate, Dev, CardFooter } from "./styles"
 import Link from "next/link";
 export function Footer() {
     return (
@@ -35,10 +35,10 @@ export function Footer() {
                
                    
                 </Links>
-                <ul>
+                <DevCreate>
                             
-                    <li><span>Desenvolvido por Felipe Marques</span> <BiDevices />  </li>
-                </ul>
+                    <Dev><span>Desenvolvido por Felipe Marques</span> <BiDevices />  </Dev>
+                </DevCreate>
             </CardFooter>
         </Footers>
     )

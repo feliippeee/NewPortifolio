@@ -63,6 +63,9 @@ export const CardFooter = styled.div`
 export const Dev = styled.div`
 
 `;
+ export const DevCreate = styled.div`
+ 
+ `;
 
 export const Links = styled.div`
     display: grid;
@@ -75,4 +78,10 @@ export const Links = styled.div`
     padding: 0;
         
     }
+    @media (max-width: 350px) {
+        gap: 0.525rem;
+        font-size: 1.3rem;
+
+    }
 `;
+

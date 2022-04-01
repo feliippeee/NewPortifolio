@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-   
+   width: 100%;
+   display: flex;
     `;
 
 export const Content = styled.div`
@@ -12,7 +13,6 @@ export const Content = styled.div`
         flex-direction: column;
         margin: 0;
         padding: 0;
-        //background: red;
 
         }
 
@@ -65,6 +65,7 @@ export const ProfileUser = styled.div`
     border-radius: 0 0 1rem 1rem;
     @media (max-width: 770px) {        
         margin: 0 0.825rem 1rem 0.825rem;
+        padding: 0;
     }
     
 `;
@@ -120,6 +121,11 @@ export const ProfileUserInfo = styled.div`
         color: white;
         border-radius: 5px;
     }
+    @media (max-width: 480px) {
+        > h2 {
+            margin: 0;
+        }
+    }
 `;
 export const ProfileDescription= styled.div`
     background: #202024;
@@ -131,10 +137,10 @@ export const ProfileDescription= styled.div`
         background: #29292e;
         border-radius: 5px;
     }
-    @media (max-width: 770px) {
-        padding: 1rem ;
-        h2 {
-        
+    @media (max-width: 480px) {
+        padding: 1rem;
+        p {
+            font-size: 1.2rem;
         }
     }
 `;
@@ -163,6 +169,7 @@ export const Contact1 = styled.div`
     }
     @media (max-width: 770px) {
         grid-template-columns: 30px 1fr;
+        margin: 1rem;
         svg {
             font-size: 1.5rem;
         } 
@@ -172,6 +179,9 @@ export const Contact1 = styled.div`
 
             }
         }
+    }
+    @media (max-width: 480px) {
+        margin: 1rem 0;
     }
     }
 `;
@@ -214,11 +224,12 @@ export const CardGridProjects = styled.div`
 export const CardGrid = styled.div`
     height: 100%; 
     margin-bottom: 2rem;
-    margin: 0 6rem 0 6rem;
+    margin: 0 5rem;
     align-items: center;
     @media (max-width: 480px) {
         margin: 0 1rem;
         padding: 5px;
         border: 2px solid #29292e;
+        margin: 0 1rem 0 1rem;
     }
 `;

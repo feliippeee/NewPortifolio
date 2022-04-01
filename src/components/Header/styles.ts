@@ -73,10 +73,10 @@ export const Profission = styled.span`
 
 export const HeaderLinks = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     align-items: center;
-    width: 15rem;
+    width: 100%;
     margin: 0 3rem;
     @media (max-width: 770px) {
         gap: 0.825rem;
@@ -85,6 +85,9 @@ export const HeaderLinks = styled.div`
     @media (max-width: 480px) {
         gap: 0.825rem;
         margin: 0;
+    }
+    @media (max-width: 350px) {
+        gap: 0.425rem;
     }
 `;
 
@@ -108,6 +111,16 @@ export const LinkExt = styled.div`
         img {
             width: 35px; 
             height: 35px;
+        }
+    
+}
+@media (max-width: 350px) {
+        svg {
+            font-size: 1.4rem; 
+        }
+        img {
+            width: 25px; 
+            height: 25px;
         }
     
 }
