@@ -20,7 +20,7 @@ interface Props {
 
 export const Header: React.FC<Props> = ({toggleTheme, openModal}) => {
    const {colors, title} = useContext(ThemeContext);
-   const [modalIsOpen, setIsOpen] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
  
     return (
         <Container>
@@ -112,7 +112,7 @@ export const Header: React.FC<Props> = ({toggleTheme, openModal}) => {
                 </Content>
             </HeaderContainer>
             <MenuMobile 
-                    modalIsOpen={modalIsOpen}
+                    modalIsOpen={isOpen}
                     setIsOpen={setIsOpen}
             />
         </Container>

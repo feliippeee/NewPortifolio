@@ -11,7 +11,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 
 interface MenuProps {
     modalIsOpen: boolean;
-    setIsOpen: (setIsOpen: boolean) => Boolean;
+    setIsOpen: (setIsOpen: boolean) => void;
 }
 const customStyles = {
     content: {
