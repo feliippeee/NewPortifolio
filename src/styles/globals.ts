@@ -42,7 +42,7 @@ button {
 
 @media (max-width: 350px) {
   html {
-    font-size: 24%;
+    font-size: 25%;
   }
 }    
     

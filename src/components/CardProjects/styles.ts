@@ -43,6 +43,9 @@ export const Title = styled.text`
     background: rgb(18,18,20);
     padding: 1rem;
     margin: 1rem 1rem 5px 1rem;
+    @media (max-width: 770px) {
+        margin: 1rem 0rem 5px 0rem;
+    }
     @media (max-width: 480px) {
         margin: 0 1rem;
     }
@@ -73,10 +76,15 @@ export const LinkGit = styled.div`
         }
 
     }
-    
-    @media (max-width: 330px){
+    @media (max-width: 770px) {
         a {
-            padding: 1rem 5rem;
+            padding: 1rem 14rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        a { 
+            padding: 1rem 7rem;
         }
     }
     @media (max-width: 425px) {
@@ -84,10 +92,10 @@ export const LinkGit = styled.div`
             padding: 1rem 6rem;
         }
     }
-    @media (max-width: 480px) {
-        a { 
-            padding: 1rem 7rem;
-    }
+    @media (max-width: 330px){
+        a {
+            padding: 1rem 4rem;
+        }
     }
 `;
 

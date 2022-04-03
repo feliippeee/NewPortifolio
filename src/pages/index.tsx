@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import { Main } from '../components/Main'
-import React from 'react'
+import React, { useState } from 'react'
 import CardProjects from '../components/CardProjects';
 import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { MenuMobile } from '../components/MenuMobile';
+import dark from '../styles/themes/dark';
+import light from '../styles/themes/light';
 type Profile = {
   name: string;
   avatar_url: string;
@@ -13,11 +17,20 @@ type RepositoriesProps = {
 }
 
 export  const Home = ({profile}: RepositoriesProps) => {
+  const [modalIsOpen, setIsOpen] = useState(false);  
+  const [theme, setTheme] = useState( light);
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light);
+  }
+  
   return (
     <>
+      
+   
       <Head>
         <title>Felipe Marques Desenvolvedor</title>       
       </Head>      
+      <Header toggleTheme={toggleTheme}  openModal={setIsOpen}/> 
       <Main />
       <Footer />
         

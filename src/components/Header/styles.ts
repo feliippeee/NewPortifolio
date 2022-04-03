@@ -15,11 +15,11 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    .container {
-        
-    }
+    
     @media (max-width: 480px) {
         height: 4.25rem;
+        justify-content: space-around;
+        
     }
 `;
 
@@ -85,6 +85,7 @@ export const HeaderLinks = styled.div`
     @media (max-width: 480px) {
         gap: 0.825rem;
         margin: 0;
+        display: none;
     }
     @media (max-width: 350px) {
         gap: 0.425rem;
@@ -124,6 +125,13 @@ export const LinkExt = styled.div`
         }
     
 }
+`;
+
+export const LinkMenuMobile = styled.div`
+    display: none;
+    @media (max-width: 480px) {
+        display: flex;
+    }
 `;
 
 export const Content = styled.div`

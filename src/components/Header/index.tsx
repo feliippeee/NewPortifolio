@@ -1,25 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Switch from 'react-switch';
 import Image  from 'next/image';
 import Link from 'next/link';
 import { FaDiscord } from 'react-icons/fa';
-import {Container, HeaderContainer, HeaderLogo, Name, Profission, ImageHeader, NameDev, Content, HeaderLinks, LinkExt} from './styles';
+import {Container, HeaderContainer, HeaderLogo, Name, Profission, ImageHeader, NameDev, Content, HeaderLinks, LinkExt, LinkMenuMobile} from './styles';
 import { SiNextDotJs, SiTypescript, SiReact, SiDiscord, SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
-
+import { RiMenu3Fill } from 'react-icons/ri';
 
 import { ThemeContext } from "styled-components";
+import { MenuMobile } from "../MenuMobile";
 
 interface Props { 
     toggleTheme(): void;
+    openModal: (openModal: boolean) => void;
    
 }
 
-export const Header: React.FC<Props> = ({toggleTheme}) => {
+
+
+export const Header: React.FC<Props> = ({toggleTheme, openModal}) => {
    const {colors, title} = useContext(ThemeContext);
-  
+   const [modalIsOpen, setIsOpen] = useState(false);
+ 
     return (
         <Container>
             <HeaderContainer>
+  
                     <HeaderLogo>
                     
                     <ImageHeader>
@@ -47,8 +53,8 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                             />
                         </li>
                     </ul>
-    </nav>*/}
-                        
+    </nav>*/}          
+                      
                         <HeaderLinks>
                             <LinkExt>                                
                                 <Link href="https://api.whatsapp.com/send?phone=5511987877320&text=Texto%20aqui">
@@ -100,8 +106,15 @@ export const Header: React.FC<Props> = ({toggleTheme}) => {
                             
                        
                         </HeaderLinks>
+                        <LinkMenuMobile>
+                            <RiMenu3Fill size={35} style={{ cursor: 'pointer'}}onClick={() =>setIsOpen(true)} />
+                        </LinkMenuMobile>
                 </Content>
             </HeaderContainer>
+            <MenuMobile 
+                    modalIsOpen={modalIsOpen}
+                    setIsOpen={setIsOpen}
+            />
         </Container>
         
     )
