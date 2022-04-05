@@ -28,7 +28,7 @@ export default function Contact({data, link, linkExternal}: ContactProps) {
                 }}
             />
                 <Link href={'mailto:felipe.tecnosuporte@gmail.com'}>
-                    <a>felipe.tecnosuporte@gmai.com
+                    <a>felipe.tecnosuporte@gmail.com
                     <div>
                     <BsBoxArrowUpRight />
                     </div>

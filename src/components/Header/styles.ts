@@ -95,6 +95,10 @@ export const HeaderLinks = styled.div`
 export const LinkExt = styled.div`
     svg{ 
         font-size: 2.5rem; 
+        
+    }
+    svg:hover {
+        font-size: 1.5em;
     }
     @media (max-width: 770px) {
         svg {

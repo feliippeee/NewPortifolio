@@ -115,7 +115,7 @@ export const ImageProject = styled.img`
         
     }
     @media (max-width: 480px) {
-       
+       height: 200px;
     }
     
 `;
