@@ -1,13 +1,16 @@
 import styled from "styled-components";
 export const Footers = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 1rem;
+    background: rgb(18, 18, 20);
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
     `;
 
 export const CardFooter = styled.div`
     padding: 1rem;
-    background: rgb(18, 18, 20);
     width: 100%;
     //background: ${props => props.theme.colors.primary};
     display: flex;
@@ -50,6 +53,7 @@ export const CardFooter = styled.div`
         }
     }
     @media (max-width: 480px) {
+        height: 60px;
         ul {
 
             li { 
@@ -60,12 +64,6 @@ export const CardFooter = styled.div`
             }
         }
 `;
-export const Dev = styled.div`
-
-`;
- export const DevCreate = styled.div`
- 
- `;
 
 export const Links = styled.div`
     display: grid;
@@ -74,14 +72,48 @@ export const Links = styled.div`
     gap: 1rem;
     align-items: center;
     @media (max-width: 480px) {
-    font-size: 1.8rem;
-    padding: 0;
+        font-size: 1.8rem;
+        padding: 0;
         
     }
     @media (max-width: 350px) {
-        gap: 0.525rem;
-        font-size: 1.3rem;
-
+        
+        
     }
-`;
+    `;
 
+    export const DevCreate = styled.div`
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        align-self: center;
+        border: 2px solid white;
+        margin-right: 1rem;
+        @media (max-width: 480px) {
+        margin: 2px;
+        
+    }
+    `;
+    export const Dev = styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        font-size: 1.5rem;
+        border: 5px solid #29292e;
+        padding: 0.625rem;
+    
+        text-align: center;
+        color: white;
+        svg {
+            margin-left: 0.5rem;
+        }
+        @media (max-width: 770px) {
+        font-size: 1.3rem;
+        
+    }
+        @media (max-width: 480px) {
+        font-size: 1rem;
+        
+    }
+    `;

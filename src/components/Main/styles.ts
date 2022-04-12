@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface Props {
+    selected: number;
+}
 
 export const Container = styled.div`
    width: 100%;
@@ -36,17 +40,22 @@ export const ContentInfo = styled.div`
 export const Buttons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 5rem 1rem 5rem;
-    height: 40px;
+    margin: 0 5rem 2rem 5rem;
+    
     @media (max-width: 480px) {
         margin: 7rem 1rem 1rem 1rem;
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<Props>`
     background: black;
     color: white;
     padding: 1rem;
+    ${({selected}) => selected && css`
+        border: 2px solid white; 
+        background: #29292e;
+        font-weight: bold;
+    ` };
     &:hover {
         background: #29292e;
         transition: 0.5s;
@@ -67,6 +76,7 @@ export const ProfileUser = styled.div`
         margin: 0 0.825rem 1rem 0.825rem;
         padding: 0;
     }
+    @media (max-width: 480px) {}
     
 `;
 
@@ -100,14 +110,17 @@ export const Description = styled.div`
         justify-content: space-evenly;
         font-size: 1.5rem;
     }
+    @media (max-width: 770px) {
+        padding: 1rem;
+        p {
+            font-size: 1.5rem;
+        }
+    }
     @media (max-width: 480px) {
         grid-template-columns: 1fr;
         padding: 0.5rem;
-    }
-    @media (max-width: 770px) {
-        
-        p {
-            font-size: 1.5rem;
+        h2 {
+            font-size: 1.4rem;
         }
     }
 
@@ -187,7 +200,47 @@ export const Contact1 = styled.div`
 `;
 
 export const About = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h2 {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem 5px;
+        background: white;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        list-style: none;
+        align-items: center;
+        margin-bottom: 1rem;
+        text-align: center;
+        padding: 5px;
+
+        li {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #29292e;
+            padding: 5px;
+            font-weight: 600;
+            border-radius: 10px;
+            svg {
+                font-size: 2.5rem;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        ul {
+            font-size: 0.825rem;
+        }
+    }
 `;
 
 export const CardTitle = styled.div`

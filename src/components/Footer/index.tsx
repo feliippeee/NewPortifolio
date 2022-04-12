@@ -35,11 +35,11 @@ export function Footer() {
                
                    
                 </Links>
-                <DevCreate>
-                            
-                    <Dev><span>Desenvolvido por Felipe Marques</span> <BiDevices />  </Dev>
-                </DevCreate>
             </CardFooter>
+                <DevCreate>                            
+                    <Dev>Desenvolvido por Felipe Marques <BiDevices /> </Dev>
+                    
+                </DevCreate>
         </Footers>
     )
 }

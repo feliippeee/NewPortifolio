@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
       color: ${props => props.theme.colors.text};
 
   }
+  
   body, input, button {
     font: 400 1rem "Roboto", sans-serif;
 
@@ -42,7 +43,7 @@ button {
 
 @media (max-width: 350px) {
   html {
-    font-size: 25%;
+    font-size: 30%;
   }
 }    
     

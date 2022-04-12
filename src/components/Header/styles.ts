@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import { shade } from "polished"; //utilizar ele para hover
 
+interface ModalProps {
+    modalActive: boolean;
+}
+
 export const Container = styled.div`
     display: flex;
     background: ${props => props.theme.colors.background};
-
-`;
+    
+    `;
 
 export const HeaderContainer = styled.div`
+    z-index: 10;
     position: fixed;
     background: rgb(18, 18, 20);
     width: 100%;

@@ -30,13 +30,13 @@ export default function CardProjects({image, textSubtitle, title, subTitle, link
                 <SubTitle>
                     {subTitle}
                 </SubTitle>
+                    
+                </DescriptionProject>
                     <LinkGit>
                     <Link href={link}>
                         <a target="_blank" rel="noopener noreferrer">Link do GitHub</a>
                     </Link>
                     </LinkGit>
-                    
-                </DescriptionProject>
             </Projects>
         </Container>
     )

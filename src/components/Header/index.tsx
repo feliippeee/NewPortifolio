@@ -1,24 +1,22 @@
 import React, { useContext, useState } from "react";
-import Switch from 'react-switch';
 import Image  from 'next/image';
 import Link from 'next/link';
-import { FaDiscord } from 'react-icons/fa';
+import { FaBars, FaDiscord } from 'react-icons/fa';
 import {Container, HeaderContainer, HeaderLogo, Name, Profission, ImageHeader, NameDev, Content, HeaderLinks, LinkExt, LinkMenuMobile} from './styles';
-import { SiNextDotJs, SiTypescript, SiReact, SiDiscord, SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
-import { RiMenu3Fill } from 'react-icons/ri';
+import { SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 import { ThemeContext } from "styled-components";
-import { MenuMobile } from "../MenuMobile";
+import { IoClose } from "react-icons/io5";
 
 interface Props { 
     toggleTheme(): void;
-    openModal: (openModal: boolean) => void;
-   
+    setModalActive: (setModalActive: boolean) => void;
+    modalActive: boolean;
 }
 
 
 
-export const Header: React.FC<Props> = ({toggleTheme, openModal}) => {
+export const Header: React.FC<Props> = ({toggleTheme, setModalActive, modalActive}) => {
    const {colors, title} = useContext(ThemeContext);
    const [isOpen, setIsOpen] = useState(false);
  
@@ -107,14 +105,20 @@ export const Header: React.FC<Props> = ({toggleTheme, openModal}) => {
                        
                         </HeaderLinks>
                         <LinkMenuMobile>
-                            <RiMenu3Fill size={35} style={{ cursor: 'pointer'}}onClick={() =>setIsOpen(true)} />
+                          {modalActive ? <IoClose size={35} style={{ cursor: 'pointer', background: 'white', borderRadius: '50%'}}onClick={() =>setModalActive(!modalActive)} /> : <FaBars size={35} style={{ cursor: 'pointer'}}onClick={() =>setModalActive(!modalActive)} />}
                         </LinkMenuMobile>
                 </Content>
             </HeaderContainer>
-            <MenuMobile 
-                    modalIsOpen={isOpen}
-                    setIsOpen={setIsOpen}
-            />
+           {
+               /*
+           <ModalActive setModalActive={() => setModalActive(modalActive)} />
+               <MenuMobile 
+                        modalIsOpen={isOpen}
+                        setIsOpen={setIsOpen}
+                />
+               
+               */
+           } 
         </Container>
         
     )

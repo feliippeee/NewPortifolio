@@ -12,6 +12,7 @@ export const Container = styled.div`
     @media (max-width: 480px) {
       justify-content: center;
       width: 100%;
+      background: none ;
       border-bottom: 2px solid #29292e;
       :last-child {
           margin-bottom: 0;
@@ -24,21 +25,24 @@ export const Projects = styled.div`
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
     margin: 1rem;
-    @media (max-width: 720px) {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
     @media (max-width: 1080px) {
         grid-template-columns: 1fr;
         
         margin: 0;
-
+        
+    }
+    @media (max-width: 770px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    @media (max-width: 480px){
+        gap: 0;
     }
     
 `;
 
 export const Title = styled.text`
-    font-size: 20px;
+    font-size: 1.5rem;
     text-align: center;
     background: rgb(18,18,20);
     padding: 1rem;
@@ -48,6 +52,7 @@ export const Title = styled.text`
     }
     @media (max-width: 480px) {
         margin: 0 1rem;
+        font-size: 1rem;
     }
 `;
 
@@ -89,14 +94,10 @@ export const LinkGit = styled.div`
     }
     @media (max-width: 425px) {
         a {
-            padding: 1rem 6rem;
+            padding: 1rem 5rem;
         }
     }
-    @media (max-width: 330px){
-        a {
-            padding: 1rem 4rem;
-        }
-    }
+   
 `;
 
 export const CardImageProject = styled.div`

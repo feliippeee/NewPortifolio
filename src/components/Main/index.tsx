@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import { useState } from "react";
 import { BsBoxArrowUpRight, BsFillPersonFill } from "react-icons/bs";
-import { SiGithub, SiWhatsapp, SiGmail, SiLinkedin } from "react-icons/si";
+import { GrTest } from "react-icons/gr";
+import { GoDeviceMobile } from "react-icons/go";
+import { SiGithub, SiWhatsapp, SiGmail, SiLinkedin, SiTypescript, SiReact, SiStyledComponents, SiNextDotJs, SiSass, SiExpo } from "react-icons/si";
 import CardProjects from "../CardProjects";
 import { Footer } from '../Footer';
 
@@ -31,14 +33,11 @@ type RepositoriesProps = {
 }
 
 export function Main() {
-    const [ selected, setSelected] = useState('1');
+    const [ selected, setSelected] = useState(1);
     const [ active, setActive] = useState(false);
-    function handleSelected(tabs: string) {
-        setSelected('');
+    function handleSelected(tabs: number) {
         setSelected(tabs);
-        setActive(true);
-
-        
+        setActive(true);     
     }
     return (
         <Container>
@@ -48,12 +47,12 @@ export function Main() {
                 </ContentInfo>   
     */}
                 <Buttons>
-                    <Button onClick={() => handleSelected('1')} type="button">Sobre mim</Button> {/*criar um componente buttom para pegar o ...rest e colocar o active*/}
-                    <Button onClick={() => handleSelected('2')} type="button">O que estou aprendendo?</Button> 
+                    <Button selected={selected == 1 ? selected : 0} onClick={() => handleSelected(1)} type="button">Sobre mim</Button> {/*criar um componente buttom para pegar o ...rest e colocar o active*/}
+                    <Button selected={selected == 2 ? selected : 0} onClick={() => handleSelected(2)} type="button">O que estou aprendendo?</Button> 
                 </Buttons> 
                         
        <ProfileUser >
-           {selected == '1' && (
+           {selected == 1 && (
                 <Description>
                     <ProfileUserInfo>                        
                         <h2>Dados para contato</h2>
@@ -109,17 +108,18 @@ export function Main() {
             </Description>
 
            )}
-           {selected == '2' && (
+           {selected == 2 && (
                <About>
                         <h2>Tecnologias</h2>
                         <ul>   
-                            <li>React JS</li>  
-                            <li>React Native</li> 
-                            <li>Expo</li>              
-                            <li>Next</li>
-                            <li>Typescript</li>
-                            <li>Styled components</li>
-                            <li>Sass</li>
+                            <li><SiReact style={{color: 'blue', borderRadius: '50%'}}/> React JS</li>  
+                            <li><SiReact style={{color: '#8dbdeb', borderRadius: '50%'}}/> React Native</li> 
+                            <li><SiExpo /> Expo</li>              
+                            <li><SiNextDotJs style={{background: 'black', color:'white',padding: '5px', borderRadius: '5px' }}/> Next</li>
+                            <li><SiStyledComponents /> Styled components</li>
+                            <li><SiTypescript color="blue" style={{background: 'white', borderRadius: '5px' }} /> Typescript</li>
+                            <li><SiSass /> Sass</li>
+                            <li><GrTest /> Testes</li>
                             <li>Memo</li>
                             <li>useMemo</li>
                             <li>useCallback</li>
@@ -127,32 +127,11 @@ export function Main() {
                             <li>Hooks</li>
                             <li>Consumir Api</li>
                             <li>Axios</li>
-                            <li>Testes unitários</li>
                         </ul>  
                 
                </About> 
            )}
-           {
-               selected == '3' && (
-                   <>
-                    <CardProjects 
-                        image='/ignews.png'
-                        title="Ignews - Portal de Notícias"
-                        subTitle='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
-
-                        A aplicação foi desenvolvida utilizando o framework NextJS aplicando conceitos como consumo de API externas, API Root, Server Side Rendering (SSR), Static Site Generation (SSG), STRIPE para pagamentos das subscriptions, NextAuth para autenticação com Github, FaunaDB para armazenar as informações do usuário em um banco de dados e Prismic CMS para adição e gerenciamento do conteúdo dos posts.
-                        
-                        O projeto foi desenvolvido como pratica das aulas do modulo 03 do Ignite da Rocketseat'
-                        link='https://github.com/feliippeee/ignews'
-                         
-
-                    />
-                   
-                   </>
-               )
-               
-           }
-            
+          
         </ProfileUser> 
         
 
