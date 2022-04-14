@@ -20,6 +20,10 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    @media(max-width: 770px) {
+        justify-content: space-around;
+    }
     
     @media (max-width: 480px) {
         height: 4.25rem;
@@ -33,6 +37,9 @@ export const HeaderLogo = styled.div`
     grid-template-columns: 100px 1fr;
     justify-content: center;
     align-items: center;
+    @media (max-width: 720px) {
+        grid-template-columns: 1fr;
+    }
     @media (max-width: 480px) {
         grid-template-columns: 1fr;
     } 
@@ -55,6 +62,9 @@ export const NameDev = styled.div`
 
 export const Name = styled.h1`
     color: white;
+    @media (max-width: 720px) {
+        font-size: 1rem;
+    }
     @media (max-width: 480px) {
         text-align: center;
         font-size: 1rem;
@@ -78,7 +88,7 @@ export const Profission = styled.span`
 
 export const HeaderLinks = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
     align-items: center;
     width: 100%;

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
      display: flex;
      margin-bottom: 2rem;
-     background: rgb(18,18,20);
-
+     //background: rgb(18,18,20);
+    border: 2px solid rgb(18,18,20);
      :first-child {
         margin-top: 0;
     }
@@ -22,17 +22,14 @@ export const Container = styled.div`
 `;
 export const Projects = styled.div`
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin: 1rem;
     @media (max-width: 1080px) {
-        grid-template-columns: 1fr;
-        
         margin: 0;
         
     }
     @media (max-width: 770px) {
-        grid-template-columns: 1fr;
         width: 100%;
     }
     @media (max-width: 480px){
@@ -42,7 +39,7 @@ export const Projects = styled.div`
 `;
 
 export const Title = styled.text`
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
     background: rgb(18,18,20);
     padding: 1rem;
@@ -57,9 +54,14 @@ export const Title = styled.text`
 `;
 
 export const SubTitle = styled.text`
-    font-size: 16px;
+    font-size: 1.8rem;
     padding: 1rem;
+    line-height: 3rem;
     text-align: justify;
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
     
 
 `;
@@ -71,9 +73,16 @@ export const LinkGit = styled.div`
     width: 100%;
     
     a {
+        display: flex;
+        justify-content: center;
         background: #29292e;
         color: white;
-        padding: 1rem 7rem;
+        padding: 2rem;
+        margin: 0 1rem;
+        font-size: 2rem;
+        svg {
+            margin-right: 1rem;
+        } 
         &:hover {
             background: #444;
             
@@ -82,20 +91,17 @@ export const LinkGit = styled.div`
 
     }
     @media (max-width: 770px) {
-        a {
-            padding: 1rem 14rem;
-        }
+        
     }
     
     @media (max-width: 480px) {
-        a { 
-            padding: 1rem 7rem;
-        }
+       a {
+           padding: 1rem;
+           font-size: 1rem;
+       }
     }
     @media (max-width: 425px) {
-        a {
-            padding: 1rem 5rem;
-        }
+       
     }
    
 `;
@@ -106,8 +112,8 @@ export const CardImageProject = styled.div`
     align-items: center;
 `;
 export const ImageProject = styled.img`
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     img {
         width: 95%;
         height: 95%;
@@ -116,7 +122,12 @@ export const ImageProject = styled.img`
         
     }
     @media (max-width: 480px) {
-       height: 200px;
+        padding: 10px;
+        height: 200px;
+        img {
+            object-fit: cover;
+        }
+    
     }
     
 `;

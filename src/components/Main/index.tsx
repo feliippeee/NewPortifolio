@@ -112,14 +112,14 @@ export function Main() {
                <About>
                         <h2>Tecnologias</h2>
                         <ul>   
-                            <li><SiReact style={{color: 'blue', borderRadius: '50%'}}/> React JS</li>  
-                            <li><SiReact style={{color: '#8dbdeb', borderRadius: '50%'}}/> React Native</li> 
-                            <li><SiExpo /> Expo</li>              
-                            <li><SiNextDotJs style={{background: 'black', color:'white',padding: '5px', borderRadius: '5px' }}/> Next</li>
-                            <li><SiStyledComponents /> Styled components</li>
-                            <li><SiTypescript color="blue" style={{background: 'white', borderRadius: '5px' }} /> Typescript</li>
-                            <li><SiSass /> Sass</li>
-                            <li><GrTest /> Testes</li>
+                            <li>React JS<SiReact style={{color: 'blue', borderRadius: '50%'}}/></li>  
+                            <li>React Native<SiReact style={{color: '#8dbdeb', borderRadius: '50%'}}/></li> 
+                            <li>Expo<SiExpo /></li>              
+                            <li>Next<SiNextDotJs style={{background: 'black', color:'white',padding: '5px', borderRadius: '5px' }}/></li>
+                            <li>Styled components<SiStyledComponents /></li>
+                            <li>Typescript<SiTypescript color="blue" style={{background: 'white', borderRadius: '5px' }} /></li>
+                            <li>Sass<SiSass /></li>
+                            <li>Testes<GrTest /></li>
                             <li>Memo</li>
                             <li>useMemo</li>
                             <li>useCallback</li>

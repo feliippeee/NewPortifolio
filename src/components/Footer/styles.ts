@@ -67,7 +67,7 @@ export const CardFooter = styled.div`
 
 export const Links = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr );
     font-size: 2.5rem;
     gap: 1rem;
     align-items: center;

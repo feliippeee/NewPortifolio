@@ -76,7 +76,9 @@ export const ProfileUser = styled.div`
         margin: 0 0.825rem 1rem 0.825rem;
         padding: 0;
     }
-    @media (max-width: 480px) {}
+    @media (max-width: 480px) {
+        width: 100%;
+    }
     
 `;
 
@@ -99,10 +101,11 @@ export const Description = styled.div`
         padding: 1rem;
         text-align: center;
         background: ${props => props.theme.colors.primary};
-        border-radius: 1rem;
+        
     }
     p {
         font-size: 2rem;
+        line-height: 3rem;
         text-align: justify;
     }
     span {
@@ -118,8 +121,8 @@ export const Description = styled.div`
     }
     @media (max-width: 480px) {
         grid-template-columns: 1fr;
-        padding: 0.5rem;
         h2 {
+            padding: 0.225rem;
             font-size: 1.4rem;
         }
     }
@@ -129,10 +132,16 @@ export const Description = styled.div`
 export const ProfileUserInfo = styled.div`
     background: rgb(18, 18, 20);
     > h2{
-        background: #29292e;
+        background: white;
         margin: 0 2rem;
-        color: white;
+        color: black;
         border-radius: 5px;
+        border: 5px solid black;
+    }
+    @media (max-width: 770px) {
+       >h2 {
+            margin: 0 1rem;
+       } 
     }
     @media (max-width: 480px) {
         > h2 {
@@ -145,7 +154,7 @@ export const ProfileDescription= styled.div`
     color: white;
     border-radius: 5px;
     text-align: justify;
-    padding: 1rem 4rem;
+    padding: 1rem;
     h2 {
         background: #29292e;
         border-radius: 5px;
@@ -170,6 +179,9 @@ export const Contact1 = styled.div`
     margin: 1rem 2rem;
     border-radius: 5px;
     align-items: center;
+    :nth-child(6) {
+        margin-bottom: 0;
+    }
     svg {
         font-size: 2.5rem;
         border-radius: 5px;
@@ -209,6 +221,7 @@ export const About = styled.div`
         padding: 1rem;
         margin: 1rem 5px;
         background: white;
+       
     }
     ul {
         display: grid;
@@ -221,24 +234,48 @@ export const About = styled.div`
         padding: 5px;
 
         li {
-            color: white;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            color: white;
+            justify-content: space-between;
             align-items: center;
             background: #29292e;
-            padding: 5px;
+            padding: 1rem;
+            height: 70px;
+            font-size: 1.3rem;
             font-weight: 600;
             border-radius: 10px;
             svg {
-                font-size: 2.5rem;
-                margin-bottom: 5px;
+                font-size: 3rem;
+                margin-left: 10px;
+                
             }
         }
     }
-    @media (max-width: 480px) {
+    @media (max-width: 770px) {
         ul {
-            font-size: 0.825rem;
+            
+            padding: 1rem;
+            grid-template-columns: 1fr 1fr;
+        li {
+            font-size: 1.8rem;
+        }
+        }
+    }
+    @media (max-width: 480px) {
+        padding: 0.5rem;
+        ul {
+            font-size: 1rem;
+            grid-template-columns: 1fr;
+            padding: 0.225rem;
+            li {
+                font-size: 1.3rem;
+                height: 50px;
+                svg {
+                font-size: 2rem;
+                margin-left: 10px;
+                
+                }
+            }
         }
     }
 `;
@@ -247,7 +284,7 @@ export const CardTitle = styled.div`
     display: flex;
     justify-content: center; 
     align-items: center;
-    font-size: 22px; 
+    font-size: 1.8rem; 
     color: white;             
     margin: 2rem 5rem;
     @media (max-width: 480px){

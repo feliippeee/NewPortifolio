@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Container, Projects, Title, SubTitle, CardImageProject, ImageProject, DescriptionProject, LinkGit } from './styles';
+import { SiGithub } from 'react-icons/si';
 interface ProjectsProps {
     image: string;
     width?: string;
@@ -34,7 +35,8 @@ export default function CardProjects({image, textSubtitle, title, subTitle, link
                 </DescriptionProject>
                     <LinkGit>
                     <Link href={link}>
-                        <a target="_blank" rel="noopener noreferrer">Link do GitHub</a>
+                        
+                        <a target="_blank" rel="noopener noreferrer"><SiGithub /> Link do GitHub</a>
                     </Link>
                     </LinkGit>
             </Projects>
