@@ -14,10 +14,11 @@ interface TesteProps {
 }
 
 export default function TesteModal({modalActive, setModalActive}: TesteProps) {
+
     return (
    <>
         {modalActive ? (
-           <Container onClick={() => setModalActive(false)}>
+           <Container  onClick={() => setModalActive(false)}>
             
             <Modal modalActive={modalActive}>
             <HeaderLinks>

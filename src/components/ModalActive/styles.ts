@@ -6,17 +6,15 @@ interface ModalProps {
 export const Container = styled.div`
     position: absolute;
     top: 4rem;
-    background: #222;
+    background: ${props => props.theme.colors.primary};
     width: 100%;
-    
-    
-`;
+    height: 100%;
+    `;
 
 export const Modal = styled.div<ModalProps>`
     z-index: 9;
+    margin-top: 4rem;
     display: ${modalActive => modalActive? 'flex' : 'none' };
-
-    background: black;
     width: 90%;
     height: 90%;
     transition: all 5s;
@@ -31,17 +29,17 @@ export const HeaderLinks = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    margin-top: 1rem;
     padding: 1rem;
     `;
 
 export const LinkExt = styled.div`
-        background: black;
+        background: ${props=> props.theme.colors.secundary};
+        padding: 0.825rem;
      a {
         display: flex;
         align-items: center;
-        margin-bottom: 1rem;
-        background: #555;
+        background: ${props=> props.theme.colors.primary};
         padding: 1rem;
         
         svg{ 

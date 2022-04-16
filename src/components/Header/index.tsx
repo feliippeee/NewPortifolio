@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Switch from 'react-switch';
 import Image  from 'next/image';
 import Link from 'next/link';
 import { FaBars, FaDiscord } from 'react-icons/fa';
@@ -7,6 +8,8 @@ import { SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 import { ThemeContext } from "styled-components";
 import { IoClose } from "react-icons/io5";
+import light from "../../styles/themes/light";
+import dark from "../../styles/themes/dark";
 
 interface Props { 
     toggleTheme(): void;
@@ -16,10 +19,8 @@ interface Props {
 
 
 
-export const Header: React.FC<Props> = ({toggleTheme, setModalActive, modalActive}) => {
-   const {colors, title} = useContext(ThemeContext);
-   const [isOpen, setIsOpen] = useState(false);
- 
+export const Header: React.FC<Props> = ({ toggleTheme, setModalActive, modalActive}) => {
+   const {colors, title} = useContext(ThemeContext);   
     return (
         <Container>
             <HeaderContainer>
@@ -35,11 +36,6 @@ export const Header: React.FC<Props> = ({toggleTheme, setModalActive, modalActiv
                     </NameDev> 
                     </HeaderLogo>
                 
-                <Content>
-                
-                    {/*<nav>
-                    <ul>
-                        <li>
                             <Switch 
                                 onChange={toggleTheme}
                                 checked={title=== 'dark'}
@@ -48,10 +44,12 @@ export const Header: React.FC<Props> = ({toggleTheme, setModalActive, modalActiv
                                 height={10}
                                 width={40}
                                 handleDiameter={20}
+                                
                             />
-                        </li>
-                    </ul>
-    </nav>*/}          
+                <Content>
+                
+                  
+                       
                       
                         <HeaderLinks>
                             <LinkExt>                                
@@ -89,7 +87,7 @@ export const Header: React.FC<Props> = ({toggleTheme, setModalActive, modalActiv
                             <LinkExt>
                                 <Link href="https://app.rocketseat.com.br/me/felipe-silva-1592460865">
                                     <a target="_blank" rel="noopener noreferrer">
-                                    <img width='50px' height='50px' style={{background: '#29292e', padding: '2px', borderRadius: '5px'}} src="logo_rocketseat.png" alt="" /> 
+                                    <img width='40px' height='40px' style={{background: '#29292e', padding: '2px', borderRadius: '5px'}} src="logo_rocketseat.png" alt="" /> 
                                     </a>
                                 </Link>
                             </LinkExt>
@@ -104,8 +102,8 @@ export const Header: React.FC<Props> = ({toggleTheme, setModalActive, modalActiv
                             
                        
                         </HeaderLinks>
-                        <LinkMenuMobile>
-                          {modalActive ? <IoClose size={35} style={{ cursor: 'pointer', background: 'white', borderRadius: '50%'}}onClick={() =>setModalActive(!modalActive)} /> : <FaBars size={35} style={{ cursor: 'pointer'}}onClick={() =>setModalActive(!modalActive)} />}
+                        <LinkMenuMobile modalActive={modalActive}>
+                          {modalActive ? <IoClose size={35} style={{ cursor: 'pointer', borderRadius: '50%'}}onClick={() =>setModalActive(!modalActive)} /> : <FaBars size={35} style={{ cursor: 'pointer'}}onClick={() =>setModalActive(!modalActive)} />}
                         </LinkMenuMobile>
                 </Content>
             </HeaderContainer>

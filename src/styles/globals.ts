@@ -10,8 +10,7 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
     body {
-      background: #202024;
-      {/*background: ${props => props.theme.colors.background};*/}
+      background: ${props => props.theme.colors.background};
       color: ${props => props.theme.colors.text};
 
   }
@@ -29,7 +28,6 @@ button {
         font-size: 93.75%;
     }
 }
-
 @media (max-width: 770px) {
     html {
         font-size: 87.5%;
@@ -37,16 +35,14 @@ button {
   
 @media (max-width: 480px) {
       html {
-        font-size: 40%;
+        font-size: 80%;
       }
     }
-
-@media (max-width: 350px) {
+@media (max-width: 320px) {
   html {
-    font-size: 30%;
+    font-size: 70%;
   }
 }    
-    
 }
 
 `;

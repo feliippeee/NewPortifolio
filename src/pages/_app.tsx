@@ -7,20 +7,34 @@ import light from '../styles/themes/light';
 import dark from '../styles/themes/dark';
 import  {Header} from '../components/Header';
 import { Footer } from '../components/Footer';
-
+import ModalActive from '../components/ModalActive';
+import { Main } from '../components/Main';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [modalIsOpen, setIsOpen] = useState(false);  
-  const [theme, setTheme] = useState( light);
-  
+  const [modalActive, setModalActive] = useState(false);  
+  const [theme, setTheme] = useState( dark);
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light);
+  }
   return (
   <ThemeProvider theme={theme}>
     
-  <GlobalStyle />    
+  <GlobalStyle /> 
+  <Header toggleTheme={toggleTheme} setModalActive={setModalActive} modalActive={modalActive} />    
     <Component {...pageProps} />   
+    <ModalActive setModalActive={setModalActive} modalActive={modalActive} />   
+      
+      {!modalActive &&
+        <>
+        <Main />
+        <Footer /> 
+        </>
+        }
     
   </ThemeProvider>
   )
 }
+
 export default MyApp

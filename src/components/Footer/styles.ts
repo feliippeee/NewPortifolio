@@ -1,9 +1,9 @@
 import styled from "styled-components";
+
 export const Footers = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
-    background: rgb(18, 18, 20);
+    background: ${props => props.theme.colors.secundary};
     @media (max-width: 480px) {
         grid-template-columns: 1fr;
     }
@@ -29,7 +29,7 @@ export const CardFooter = styled.div`
             list-style: none;
             font-size: 2rem;
             padding: 1rem;
-            color: white;
+            color: ${props => props.theme.colors.text};
             &:hover {
                 color: ${props => props.theme.colors.secundary};
                 border-radius: 1rem
@@ -87,7 +87,7 @@ export const Links = styled.div`
         grid-template-columns: 1fr;
         align-items: center;
         align-self: center;
-        border: 2px solid white;
+        border: 2px solid ${props => props.theme.colors.text};
         margin-right: 1rem;
         @media (max-width: 480px) {
         margin: 2px;
@@ -100,11 +100,11 @@ export const Links = styled.div`
         align-items: center;
         
         font-size: 1.5rem;
-        border: 5px solid #29292e;
+        border: 5px solid ${props => props.theme.colors.primary};
         padding: 0.625rem;
     
         text-align: center;
-        color: white;
+        color: ${props => props.theme.colors.text};
         svg {
             margin-left: 0.5rem;
         }

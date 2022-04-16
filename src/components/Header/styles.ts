@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { shade } from "polished"; //utilizar ele para hover
 
 interface ModalProps {
@@ -7,15 +7,15 @@ interface ModalProps {
 
 export const Container = styled.div`
     display: flex;
-    background: ${props => props.theme.colors.background};
+    background: ${props => props.theme.colors.secundary};
     
     `;
 
 export const HeaderContainer = styled.div`
     z-index: 10;
     position: fixed;
-    background: rgb(18, 18, 20);
     width: 100%;
+    background: ${props => props.theme.colors.secundary};
     height: 6.25rem;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@ export const HeaderContainer = styled.div`
     }
     
     @media (max-width: 480px) {
-        height: 4.25rem;
+        height: 5.25rem;
         justify-content: space-around;
         
     }
@@ -61,13 +61,13 @@ export const NameDev = styled.div`
 `;
 
 export const Name = styled.h1`
-    color: white;
+    color: ${props => props.theme.colors.text};
     @media (max-width: 720px) {
         font-size: 1rem;
     }
     @media (max-width: 480px) {
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.5rem;
         
     }
 `;
@@ -80,9 +80,9 @@ export const Profission = styled.span`
     background: ${props => props.theme.colors.background};
     border-radius: 1rem;
     @media (max-width: 480px) {
-        font-size: 0.625rem;
+        font-size: 0.825rem;
         text-align: center;
-        padding: 0.125rem;
+        padding: 0.425rem;
     }
 `;
 
@@ -112,9 +112,7 @@ export const LinkExt = styled.div`
         font-size: 2.5rem; 
         
     }
-    svg:hover {
-        font-size: 1.5em;
-    }
+   
     @media (max-width: 770px) {
         svg {
             font-size: 2rem; 
@@ -146,8 +144,17 @@ export const LinkExt = styled.div`
 }
 `;
 
-export const LinkMenuMobile = styled.div`
+export const LinkMenuMobile = styled.div<ModalProps>`
     display: none;
+    svg {
+        color: ${props => props.theme.colors.text};
+       //background: ${modalActive => modalActive ? 'black' : 'white'};
+        ${({modalActive}) => modalActive && css`
+            background: ${props => props.theme.colors.primary};
+            color: ${props => props.theme.colors.text};
+        `
+    };    
+    }
     @media (max-width: 480px) {
         display: flex;
     }
@@ -157,7 +164,9 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     font-size: 2rem;
-
+    > .react-switch-bg{
+        background: red;
+    }
     nav {
     ul {
         display: flex;

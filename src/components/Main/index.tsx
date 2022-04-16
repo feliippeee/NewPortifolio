@@ -95,7 +95,7 @@ export function Main() {
                     </ProfileUserInfo>   
                     
                     <ProfileDescription>
-                        <Title>Um pouco sobre mim!</Title>
+                        <h2>Um pouco sobre mim!</h2>
                         <DescriptionProfile>
 
                         <p>Olá, me chamo Felipe, sou Desenvolvedor front-end apaixonado por tecnologia, em busca de oportunidade

@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-     display: flex;
-     margin-bottom: 2rem;
-     //background: rgb(18,18,20);
-    border: 2px solid rgb(18,18,20);
+    display: flex;
+    margin-bottom: 2rem;
+    //background: ${props => props.theme.colors.primary};
+    border: 2px solid ${props => props.theme.colors.secundary};
      :first-child {
         margin-top: 0;
     }
@@ -13,7 +13,7 @@ export const Container = styled.div`
       justify-content: center;
       width: 100%;
       background: none ;
-      border-bottom: 2px solid #29292e;
+      border-bottom: 2px solid ${props => props.theme.colors.primary};
       :last-child {
           margin-bottom: 0;
           border-bottom: none;
@@ -41,7 +41,7 @@ export const Projects = styled.div`
 export const Title = styled.text`
     font-size: 2.5rem;
     text-align: center;
-    background: rgb(18,18,20);
+    background: ${props => props.theme.colors.secundary};
     padding: 1rem;
     margin: 1rem 1rem 5px 1rem;
     @media (max-width: 770px) {
@@ -75,8 +75,8 @@ export const LinkGit = styled.div`
     a {
         display: flex;
         justify-content: center;
-        background: #29292e;
-        color: white;
+        background:${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.text};
         padding: 2rem;
         margin: 0 1rem;
         font-size: 2rem;
@@ -134,8 +134,8 @@ export const ImageProject = styled.img`
 export const DescriptionProject = styled.div`
     display: flex;
     flex-direction: column;
-    background: #202024;
-    color: white;
+    background:${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
     padding: 5px;
     @media (max-width: 480px) {
         padding: 20px 0;
