@@ -21,6 +21,8 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
+    
+
     @media(max-width: 770px) {
         justify-content: space-around;
     }
@@ -85,7 +87,10 @@ export const Profission = styled.span`
         padding: 0.425rem;
     }
 `;
-
+export const ThemeSelect = styled.div`
+    
+  
+`;
 export const HeaderLinks = styled.div`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -164,9 +169,6 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     font-size: 2rem;
-    > .react-switch-bg{
-        background: red;
-    }
     nav {
     ul {
         display: flex;
@@ -176,11 +178,9 @@ export const Content = styled.div`
         li {
             padding-left: 1rem;
             cursor: pointer;   
-                 
-           
             a {
                 display: flex;
-                color: white;
+                color: ${props => props.theme.colors.text};
                 font-size: 2rem;
                 padding: 1rem;
                 font-weight: 900;

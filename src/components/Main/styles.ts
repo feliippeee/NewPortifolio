@@ -48,17 +48,17 @@ export const Buttons = styled.div`
 `;
 
 export const Button = styled.button<Props>`
-    background: ${props => props.theme.colors.secundary};
+    background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.text};
     padding: 1rem;
     ${({selected}) => selected && css`
         border: 2px solid ${props => props.theme.colors.text}; 
-        background: ${props => props.theme.colors.primary};
+        background: ${props => props.theme.colors.secundary};
         font-weight: bold;
     ` };
     &:hover {
-        background: ${props => props.theme.colors.primary};
-        transition: 0.5s;
+        background: ${props => props.theme.colors.secundary};
+        
    }
 4`;
 export const ProfileUser = styled.div`
@@ -94,7 +94,6 @@ export const ImageProfile = styled.div`
 
 export const Description = styled.div`
     display: flex;
-    flex-direction: column;
     width: 100%;
     padding: 1rem;
     h2 {
@@ -102,8 +101,8 @@ export const Description = styled.div`
         justify-content: center;
         padding: 1rem;
         margin: 1rem 5px;
-        color: ${props => props.theme.colors.secundary};
-        background: ${props => props.theme.colors.text};
+        color: ${props => props.theme.colors.text};
+        background: ${props => props.theme.colors.secundary};
         
     }
     p {
@@ -117,11 +116,9 @@ export const Description = styled.div`
         font-size: 1.5rem;
     }
     @media (max-width: 770px) {
-        p {
-            font-size: 1.5rem;
-        }
     }
     @media (max-width: 480px) {
+        flex-direction: column;
         h2 {
             padding: 0.225rem;
             font-size: 1.4rem;
@@ -134,9 +131,9 @@ export const ProfileUserInfo = styled.div`
     background: ${props => props.theme.colors.secundary};
     > h2{
         padding: 1rem;
-        background: ${props => props.theme.colors.text};
+        background: ${props => props.theme.colors.secundary};
         margin: 0 2rem;
-        color: ${props => props.theme.colors.secundary};
+        color: ${props => props.theme.colors.text};
         border-radius: 5px;
         border: 5px solid ${props => props.theme.colors.primary};
     }
@@ -164,11 +161,11 @@ export const ProfileDescription= styled.div`
     @media (max-width: 480px) {
         padding: 1rem;
         margin-top: 1rem;
-}
         p {
             font-size: 1.2rem;
         }
-    }
+}
+    
 `;
 
 export const DescriptionProfile = styled.text``;

@@ -72,7 +72,6 @@ export const Links = styled.div`
     gap: 1rem;
     align-items: center;
     @media (max-width: 480px) {
-        font-size: 1.8rem;
         padding: 0;
         
     }
@@ -89,7 +88,8 @@ export const Links = styled.div`
         align-self: center;
         border: 2px solid ${props => props.theme.colors.text};
         margin-right: 1rem;
-        @media (max-width: 480px) {
+    
+    @media (max-width: 480px) {
         margin: 2px;
         
     }

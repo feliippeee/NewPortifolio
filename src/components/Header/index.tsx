@@ -3,7 +3,20 @@ import Switch from 'react-switch';
 import Image  from 'next/image';
 import Link from 'next/link';
 import { FaBars, FaDiscord } from 'react-icons/fa';
-import {Container, HeaderContainer, HeaderLogo, Name, Profission, ImageHeader, NameDev, Content, HeaderLinks, LinkExt, LinkMenuMobile} from './styles';
+import {
+    Container, 
+    HeaderContainer, 
+    HeaderLogo, 
+    Name, 
+    Profission, 
+    ThemeSelect,
+    ImageHeader, 
+    NameDev, 
+    Content, 
+    HeaderLinks, 
+    LinkExt, 
+    LinkMenuMobile
+} from './styles';
 import { SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 import { ThemeContext } from "styled-components";
@@ -35,7 +48,8 @@ export const Header: React.FC<Props> = ({ toggleTheme, setModalActive, modalActi
                         <Profission>Desenvolvedor Front-end</Profission>                        
                     </NameDev> 
                     </HeaderLogo>
-                
+                    <ThemeSelect>
+
                             <Switch 
                                 onChange={toggleTheme}
                                 checked={title=== 'dark'}
@@ -44,8 +58,9 @@ export const Header: React.FC<Props> = ({ toggleTheme, setModalActive, modalActi
                                 height={10}
                                 width={40}
                                 handleDiameter={20}
-                                
-                            />
+                                onColor={'#29292e'}
+                                />
+                    </ThemeSelect>
                 <Content>
                 
                   
@@ -107,16 +122,6 @@ export const Header: React.FC<Props> = ({ toggleTheme, setModalActive, modalActi
                         </LinkMenuMobile>
                 </Content>
             </HeaderContainer>
-           {
-               /*
-           <ModalActive setModalActive={() => setModalActive(modalActive)} />
-               <MenuMobile 
-                        modalIsOpen={isOpen}
-                        setIsOpen={setIsOpen}
-                />
-               
-               */
-           } 
         </Container>
         
     )

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+
 interface ModalProps {
     modalActive: boolean;
 }
 
 export const Container = styled.div`
     position: absolute;
-    top: 4rem;
     background: ${props => props.theme.colors.primary};
     width: 100%;
     height: 100%;
@@ -13,11 +13,10 @@ export const Container = styled.div`
 
 export const Modal = styled.div<ModalProps>`
     z-index: 9;
-    margin-top: 4rem;
+    margin-top: 5.5rem;
     display: ${modalActive => modalActive? 'flex' : 'none' };
     width: 90%;
     height: 90%;
-    transition: all 5s;
     ul {
         list-style: none;
         text-decoration: none;
@@ -29,26 +28,25 @@ export const HeaderLinks = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
-    padding: 1rem;
+    padding: 0.525rem;
     `;
 
 export const LinkExt = styled.div`
         background: ${props=> props.theme.colors.secundary};
-        padding: 0.825rem;
+        padding: 4px 0.825rem;
      a {
         display: flex;
         align-items: center;
         background: ${props=> props.theme.colors.primary};
-        padding: 1rem;
-        
+        padding: 0 1rem;
+        height: 56px;
         svg{ 
             font-size: 2.5rem; 
             margin-right: 1.5rem;
             
         }
         p {
-            color: white;
+            color: ${props => props.theme.colors.text};
             text-align: center;
             font-size: 1rem;
             font-weight: 600;
@@ -74,9 +72,7 @@ export const LinkExt = styled.div`
             width: 35px; 
             height: 35px;
         }
-        p {
-            font-size: 5px
-        }
+       
     
 }
 @media (max-width: 350px) {

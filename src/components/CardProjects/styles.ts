@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     margin-bottom: 2rem;
-    //background: ${props => props.theme.colors.primary};
     border: 2px solid ${props => props.theme.colors.secundary};
      :first-child {
         margin-top: 0;
@@ -49,7 +48,7 @@ export const Title = styled.text`
     }
     @media (max-width: 480px) {
         margin: 0 1rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 `;
 
@@ -68,14 +67,14 @@ export const SubTitle = styled.text`
 
 export const LinkGit = styled.div`
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
     transition: 0.5s;
     width: 100%;
     
     a {
         display: flex;
         justify-content: center;
-        background:${props => props.theme.colors.primary};
+        background:${props => props.theme.colors.secundary};
         color: ${props => props.theme.colors.text};
         padding: 2rem;
         margin: 0 1rem;
@@ -84,7 +83,7 @@ export const LinkGit = styled.div`
             margin-right: 1rem;
         } 
         &:hover {
-            background: #444;
+            background: ${props => props.theme.colors.primary};
             
 
         }
@@ -97,7 +96,7 @@ export const LinkGit = styled.div`
     @media (max-width: 480px) {
        a {
            padding: 1rem;
-           font-size: 1rem;
+           font-size: 1.3rem;
        }
     }
     @media (max-width: 425px) {
@@ -122,7 +121,6 @@ export const ImageProject = styled.img`
         
     }
     @media (max-width: 480px) {
-        padding: 10px;
         height: 200px;
         img {
             object-fit: cover;
