@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 interface ModalProps {
@@ -11,7 +12,7 @@ export const Container = styled.div`
     height: 100%;
     `;
 
-export const Modal = styled.div<ModalProps>`
+export const Modal = styled(motion.div)<ModalProps>`
     z-index: 9;
     margin-top: 5.5rem;
     display: ${modalActive => modalActive? 'flex' : 'none' };
@@ -24,14 +25,14 @@ export const Modal = styled.div<ModalProps>`
     }
 `;
 
-export const HeaderLinks = styled.div`
+export const HeaderLinks = styled(motion.div)`
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0.525rem;
     `;
 
-export const LinkExt = styled.div`
+export const LinkExt = styled(motion.div)`
         background: ${props=> props.theme.colors.secundary};
         padding: 4px 0.825rem;
      a {

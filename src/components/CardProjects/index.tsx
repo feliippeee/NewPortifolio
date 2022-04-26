@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Container, Projects, Title, SubTitle, CardImageProject, ImageProject, DescriptionProject, LinkGit } from './styles';
+import { Container, Projects, Title, SubTitle, CardImageProject, ImageProject, DescriptionProject,Links, LinkGit, LinkPage } from './styles';
 import { SiGithub } from 'react-icons/si';
+import { useEffect } from 'react';
+import { AnimatePresence, usePresence } from 'framer-motion';
 interface ProjectsProps {
     image: string;
     width?: string;
@@ -10,11 +12,18 @@ interface ProjectsProps {
     title: string;
     subTitle: string;
     link: string;
+    linkProject: string;
 
 }
 
-export default function CardProjects({image, textSubtitle, title, subTitle, link}: ProjectsProps) {
+export default function CardProjects({image, textSubtitle, title, subTitle, link, linkProject}: ProjectsProps) {
+    const [isPresent, safeToRemove] = usePresence()
+    useEffect(() => {
+        !isPresent && setTimeout(safeToRemove, 1000)
+    },[isPresent])
     return (
+        <AnimatePresence exitBeforeEnter>
+
         <Container>
             <Projects>
                 <CardImageProject>
@@ -33,13 +42,20 @@ export default function CardProjects({image, textSubtitle, title, subTitle, link
                 </SubTitle>
                     
                 </DescriptionProject>
+                <Links>
                     <LinkGit>
                     <Link href={link}>
-                        
                         <a target="_blank" rel="noopener noreferrer"><SiGithub /> Link do GitHub</a>
                     </Link>
                     </LinkGit>
+                    <LinkPage>
+                        <Link href={linkProject}>
+                            <a target="_blank" rel="noopener noreferrer">Link Project</a>
+                        </Link>
+                    </LinkPage>
+                </Links>
             </Projects>
         </Container>
+        </AnimatePresence>
     )
 }

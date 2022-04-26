@@ -1,17 +1,18 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 interface Props {
     selected: number;
 }
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
    width: 100%;
    display: flex;
    background: ${props => props.theme.colors.background};
 `;
 
 export const Content = styled.div`
-    margin-top: 10rem;
+    margin-top: 8rem;
     @media (max-width: 480px) {
         display: flex; 
         flex-direction: column;
@@ -33,14 +34,14 @@ export const ContentInfo = styled.div`
     //background: ${props => props.theme.colors.primary};
     border-radius: 1rem;
     @media (max-width: 770px) {
-        font-size: 20px; // colocar em rem
+        font-size: 1.250rem; // colocar em rem
         }
     
 `;
 export const Buttons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 5rem 2rem 5rem;
+    margin: 0 5rem 0 5rem;
     
     @media (max-width: 480px) {
         margin: 7rem 1rem 1rem 1rem;
@@ -51,6 +52,7 @@ export const Button = styled.button<Props>`
     background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.text};
     padding: 1rem;
+    font-size: 1.5rem;
     ${({selected}) => selected && css`
         border: 2px solid ${props => props.theme.colors.text}; 
         background: ${props => props.theme.colors.secundary};
@@ -92,7 +94,7 @@ export const ImageProfile = styled.div`
     }
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
     display: flex;
     width: 100%;
     padding: 1rem;
@@ -127,7 +129,7 @@ export const Description = styled.div`
 
 `;
 
-export const ProfileUserInfo = styled.div`
+export const ProfileUserInfo = styled(motion.div)`
     background: ${props => props.theme.colors.secundary};
     > h2{
         padding: 1rem;
@@ -137,6 +139,7 @@ export const ProfileUserInfo = styled.div`
         border-radius: 5px;
         border: 5px solid ${props => props.theme.colors.primary};
     }
+    
     @media (max-width: 770px) {
        >h2 {
             margin: 0 1rem;
@@ -148,7 +151,7 @@ export const ProfileUserInfo = styled.div`
         }
     }
 `;
-export const ProfileDescription= styled.div`
+export const ProfileDescription= styled(motion.div)`
     background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.text};
     border-radius: 5px;
@@ -168,9 +171,9 @@ export const ProfileDescription= styled.div`
     
 `;
 
-export const DescriptionProfile = styled.text``;
+export const DescriptionProfile = styled(motion.text)``;
 
-export const Contact1 = styled.div`
+export const Contact1 = styled(motion.div)`
     display: grid;
     grid-template-columns: 50px 1fr;
     padding: 1rem;
@@ -193,6 +196,9 @@ export const Contact1 = styled.div`
         align-items: center;
         color: ${props => props.theme.colors.text};
     }
+    &:hover {
+            background: ${props => props.theme.colors.primary};
+        }
     @media (max-width: 770px) {
         grid-template-columns: 40px 1fr;
         margin: 1rem;
@@ -250,6 +256,11 @@ export const About = styled.div`
                 margin-left: 10px;
                 
             }
+            &:hover {
+                background: ${props => props.theme.colors.secundary};
+                border: 2px solid ${props => props.theme.colors.primary};
+
+            }
         }
     }
     @media (max-width: 770px) {
@@ -302,13 +313,13 @@ export const Title = styled.h2`
 `;
 
 
-export const CardGridProjects = styled.div` 
+export const CardGridProjects = styled(motion.div)` 
     display: flex; 
     justify-content: center;
     align-items: center;
 `;
 
-export const CardGrid = styled.div`
+export const CardGrid = styled(motion.div)`
     height: 100%; 
     margin-bottom: 2rem;
     margin: 0 5rem;

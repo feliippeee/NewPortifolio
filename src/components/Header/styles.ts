@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { shade } from "polished"; //utilizar ele para hover
+import { motion } from "framer-motion";
 
 interface ModalProps {
     modalActive: boolean;
@@ -34,7 +35,7 @@ export const HeaderContainer = styled.div`
     }
 `;
 
-export const HeaderLogo = styled.div`
+export const HeaderLogo = styled(motion.div)`
     display: grid;
     grid-template-columns: 100px 1fr;
     justify-content: center;
@@ -47,7 +48,7 @@ export const HeaderLogo = styled.div`
     } 
 `;
 
-export const ImageHeader = styled.div`
+export const ImageHeader = styled(motion.div)`
     img {
         border-radius: 50%;
     }
@@ -56,13 +57,13 @@ export const ImageHeader = styled.div`
     }
 `;
  
-export const NameDev = styled.div` 
+export const NameDev = styled(motion.div)` 
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
-export const Name = styled.h1`
+export const Name = styled(motion.h1)`
     color: ${props => props.theme.colors.text};
     @media (max-width: 720px) {
         font-size: 1rem;
@@ -74,7 +75,7 @@ export const Name = styled.h1`
     }
 `;
 
-export const Profission = styled.span`
+export const Profission = styled(motion.span)`
     justify-content: center;
     display: flex;
     font-weight: 600;
@@ -87,7 +88,7 @@ export const Profission = styled.span`
         padding: 0.425rem;
     }
 `;
-export const ThemeSelect = styled.div`
+export const ThemeSelect = styled(motion.div)`
     
   
 `;
@@ -112,10 +113,18 @@ export const HeaderLinks = styled.div`
     }
 `;
 
-export const LinkExt = styled.div`
+export const LinkExt = styled(motion.div)`
     svg{ 
         font-size: 2.5rem; 
-        
+        &:hover {
+            border: 2px solid ${props => props.theme.colors.text};
+        }
+    }
+    img {
+        &:hover {
+            border: 2px solid ${props => props.theme.colors.text};
+            scale: 2;
+        }
     }
    
     @media (max-width: 770px) {
@@ -187,8 +196,8 @@ export const Content = styled.div`
                 border-radius: 1rem;
 
                 &:hover {
-                    color: #29292e;
-                    //background: ${props => props.theme.colors.secundary};
+                    //color: #29292e;
+                    background: ${props => props.theme.colors.secundary};
                     transition: 0.5s;
                 }
                 .svg {

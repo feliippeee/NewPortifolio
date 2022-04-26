@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     display: flex;
     margin-bottom: 2rem;
     border: 2px solid ${props => props.theme.colors.secundary};
@@ -19,7 +20,7 @@ export const Container = styled.div`
       }
     }
 `;
-export const Projects = styled.div`
+export const Projects = styled(motion.div)`
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -53,7 +54,7 @@ export const Title = styled.text`
 `;
 
 export const SubTitle = styled.text`
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 1rem;
     line-height: 3rem;
     text-align: justify;
@@ -71,12 +72,13 @@ export const LinkGit = styled.div`
     transition: 0.5s;
     width: 100%;
     
+    
     a {
         display: flex;
         justify-content: center;
         background:${props => props.theme.colors.secundary};
         color: ${props => props.theme.colors.text};
-        padding: 2rem;
+        padding: 1rem;
         margin: 0 1rem;
         font-size: 2rem;
         svg {
@@ -103,6 +105,27 @@ export const LinkGit = styled.div`
        
     }
    
+`;
+export const Links = styled.div`
+ display: flex;
+ justify-content: space-between;
+
+`;
+export const LinkPage = styled.div`
+    text-align: center;
+    margin: 1rem 0;
+    transition: 0.5s;
+    width: 100%;
+    
+    a {
+        display: flex;
+        justify-content: center;
+        background:${props => props.theme.colors.secundary};
+        color: ${props => props.theme.colors.text};
+        padding: 1rem;
+        margin: 0 1rem;
+        font-size: 2rem;
+    }
 `;
 
 export const CardImageProject = styled.div`

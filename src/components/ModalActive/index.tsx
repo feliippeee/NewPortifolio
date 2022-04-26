@@ -14,16 +14,42 @@ interface TesteProps {
 }
 
 export default function TesteModal({modalActive, setModalActive}: TesteProps) {
+    const containerVariants = {
+        hidden: { opacity: 1, scale: 0.5 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            delayChildren: 0.5,
+            staggerChildren: 0.5
+          }
+        }
+      }
+
+      const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+          y: 0,
+          opacity: 1
+        }
+      }
 
     return (
    <>
         {modalActive ? (
            <Container  onClick={() => setModalActive(false)}>
             
-            <Modal modalActive={modalActive}>
-            <HeaderLinks>
-                <LinkExt>                                
-                    <Link href="https://api.whatsapp.com/send?phone=5511987877320&text=Texto%20aqui">
+            <Modal  
+                modalActive={modalActive}
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                >
+            <HeaderLinks
+                
+            >
+                <LinkExt variants={itemVariants}>                                
+                    <Link href="https://api.whatsapp.com/send?phone=5511987877320&text=Olá%20Felipe,%20vamos%20conversar%20sobre">
                         <a target="_blank" rel="noopener noreferrer">
                         <SiWhatsapp style={{background: 'green', padding: '5px', color: 'white', borderRadius: '5px'}} /> 
                         <p>Conversar pelo Whatts</p>
@@ -31,7 +57,7 @@ export default function TesteModal({modalActive, setModalActive}: TesteProps) {
                     </Link>
                 </LinkExt>
 
-                <LinkExt>
+                <LinkExt variants={itemVariants}>
                     <Link href="https://github.com/feliippeee">
                         <a target="_blank" rel="noopener noreferrer">
                             <SiGithub style={{color: 'black', background: '#888888', borderRadius: '50%'}}/>
@@ -40,7 +66,7 @@ export default function TesteModal({modalActive, setModalActive}: TesteProps) {
                     </Link>                
                 </LinkExt>
                 
-                <LinkExt>
+                <LinkExt variants={itemVariants}>
                     <Link href="https://www.linkedin.com/in/felipe-silva-99aba820a/">
                         <a target="_blank" rel="noopener noreferrer"> 
                             <SiLinkedin color="blue" style={{background: 'white', borderRadius: '5px' }} /> 
@@ -49,7 +75,7 @@ export default function TesteModal({modalActive, setModalActive}: TesteProps) {
                     </Link> 
                 </LinkExt>
                 
-                <LinkExt>                                
+                <LinkExt variants={itemVariants}>                                
                     <Link href='mailto:felipe.tecnosuporte@gmail.com'>
                         <a>
                             <SiGmail style={{background: 'white', color:'red',padding: '5px', borderRadius: '5px' }}/>
@@ -58,7 +84,7 @@ export default function TesteModal({modalActive, setModalActive}: TesteProps) {
                     </Link>
                 </LinkExt>
 
-                <LinkExt>
+                <LinkExt variants={itemVariants}>
                     <Link href="https://discord.com/channels/@me/826535289391415296">
                         <a>
                             <FaDiscord style={{background: 'white', color: 'blue', borderRadius: '5px'}}/>  
