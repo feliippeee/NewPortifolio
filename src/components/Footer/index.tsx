@@ -1,4 +1,4 @@
-import { SiWhatsapp, SiTypescript, SiReact, SiNextDotJs, SiDiscord} from "react-icons/si";
+import { SiWhatsapp, SiTypescript, SiReact, SiNextDotJs} from "react-icons/si";
 import { BiDevices } from "react-icons/bi";
 
 import { Footers, Links, DevCreate, Dev, CardFooter } from "./styles"

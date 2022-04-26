@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BsBoxArrowUpRight, BsFillPersonFill } from "react-icons/bs";
-import { SiNextDotJs, SiTypescript, SiReact, SiNodeDotJs, SiGithub, SiWhatsapp, SiGmail, SiLinkedin } from "react-icons/si";
 
 
 type IconProps = {

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {ThemeProvider} from 'styled-components';
-import usePersistedState from '../utils/usePersistedState';
 import { GlobalStyle } from '../styles/globals';
 import type { AppProps } from 'next/app';
 import light from '../styles/themes/light';
@@ -12,7 +11,6 @@ import { Main } from '../components/Main';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [modalIsOpen, setIsOpen] = useState(false);  
   const [modalActive, setModalActive] = useState(false);  
   const [theme, setTheme] = useState( dark);
   const toggleTheme = () => {

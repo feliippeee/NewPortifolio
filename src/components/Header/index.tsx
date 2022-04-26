@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Switch from 'react-switch';
 import Image  from 'next/image';
 import Link from 'next/link';
@@ -21,8 +21,6 @@ import { SiWhatsapp, SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 import { ThemeContext } from "styled-components";
 import { IoClose } from "react-icons/io5";
-import light from "../../styles/themes/light";
-import dark from "../../styles/themes/dark";
 
 interface Props { 
     toggleTheme(): void;
