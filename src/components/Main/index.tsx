@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState } from "react";
 import { BsBoxArrowUpRight, BsFillPersonFill } from "react-icons/bs";
 import { GrTest } from "react-icons/gr";
-import { GoDeviceMobile } from "react-icons/go";
+import { FiChevronsDown } from "react-icons/fi";
 import { SiGithub, SiWhatsapp, SiGmail, SiLinkedin, SiTypescript, SiReact, SiStyledComponents, SiNextDotJs, SiSass, SiExpo } from "react-icons/si";
 import CardProjects from "../CardProjects";
 import { Footer } from '../Footer';
@@ -253,7 +253,7 @@ export function Main() {
                 <CardProjects
                     image='/letmeask_create_room.png'
                     title="Ignews - Portal de Notícias"
-                    subTitle='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
+                    text='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
                     
                     A aplicação foi desenvolvida utilizando o framework NextJS aplicando conceitos como consumo de API externas, API Root, Server Side Rendering (SSR), Static Site Generation (SSG), STRIPE para pagamentos das subscriptions, NextAuth para autenticação com Github, FaunaDB para armazenar as informações do usuário em um banco de dados e Prismic CMS para adição e gerenciamento do conteúdo dos posts.
                     
@@ -265,7 +265,7 @@ export function Main() {
                 <CardProjects 
                     image='/ignews.png'
                     title="Ignews - Portal de Notícias"
-                    subTitle='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
+                    text='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
                     
                     A aplicação foi desenvolvida utilizando o framework NextJS aplicando conceitos como consumo de API externas, API Root, Server Side Rendering (SSR), Static Site Generation (SSG), STRIPE para pagamentos das subscriptions, NextAuth para autenticação com Github, FaunaDB para armazenar as informações do usuário em um banco de dados e Prismic CMS para adição e gerenciamento do conteúdo dos posts.
                     
@@ -273,8 +273,35 @@ export function Main() {
                     link='https://github.com/feliippeee/ignews'    
                     linkProject='https://github.com/feliippeee/ignews'
                 />
-                        
+
+                <CardProjects
+                    image='/letmeask_create_room.png'
+                    title="Ignews - Portal de Notícias"
+                    text='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
+                    
+                    A aplicação foi desenvolvida utilizando o framework NextJS aplicando conceitos como consumo de API externas, API Root, Server Side Rendering (SSR), Static Site Generation (SSG), STRIPE para pagamentos das subscriptions, NextAuth para autenticação com Github, FaunaDB para armazenar as informações do usuário em um banco de dados e Prismic CMS para adição e gerenciamento do conteúdo dos posts.
+                    
+                    O projeto foi desenvolvido como pratica das aulas do modulo 03 do Ignite da Rocketseat'
+                    link='https://github.com/feliippeee/ignews'
+                    linkProject='https://github.com/feliippeee/ignews'
+                    
+                />
+                <CardProjects 
+                    image='/ignews.png'
+                    title="Ignews - Portal de Notícias"
+                    text='O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
+                    
+                    A aplicação foi desenvolvida utilizando o framework NextJS aplicando conceitos como consumo de API externas, API Root, Server Side Rendering (SSR), Static Site Generation (SSG), STRIPE para pagamentos das subscriptions, NextAuth para autenticação com Github, FaunaDB para armazenar as informações do usuário em um banco de dados e Prismic CMS para adição e gerenciamento do conteúdo dos posts.
+                    
+                    O projeto foi desenvolvido como pratica das aulas do modulo 03 do Ignite da Rocketseat'
+                    link='https://github.com/feliippeee/ignews'    
+                    linkProject='https://github.com/feliippeee/ignews'
+                />
             </CardGrid>
+                    <a href="/">
+                        Carregar mais projetos
+                        <FiChevronsDown />
+                    </a>      
         </CardGridProjects>
         </Content>
      </Container>

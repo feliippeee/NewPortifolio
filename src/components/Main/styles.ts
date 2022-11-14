@@ -62,7 +62,7 @@ export const Button = styled.button<Props>`
         background: ${props => props.theme.colors.secundary};
         
    }
-4`;
+`;
 export const ProfileUser = styled.div`
     margin: 0 5rem 2rem 5rem;
     display: flex;
@@ -165,7 +165,8 @@ export const ProfileDescription= styled(motion.div)`
         padding: 1rem;
         margin-top: 1rem;
         p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            padding: 1rem;
         }
 }
     
@@ -198,6 +199,7 @@ export const Contact1 = styled(motion.div)`
     }
     &:hover {
             background: ${props => props.theme.colors.primary};
+            border: 2px solid white;
         }
     @media (max-width: 770px) {
         grid-template-columns: 40px 1fr;
@@ -213,7 +215,7 @@ export const Contact1 = styled(motion.div)`
     @media (max-width: 480px) {
         margin: 1rem 0;
     }
-    }
+    
 `;
 
 export const About = styled.div`
@@ -315,15 +317,35 @@ export const Title = styled.h2`
 
 export const CardGridProjects = styled(motion.div)` 
     display: flex; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    > a {
+        display: flex;
+        justify-content: center;
+        color: white;
+        gap: 6px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+        font-size: 1.3rem;
+
+    }
 `;
 
 export const CardGrid = styled(motion.div)`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
     height: 100%; 
     margin-bottom: 2rem;
     margin: 0 5rem;
-    align-items: center;
+    align-items: flex-start;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+   
     @media (max-width: 480px) {
         margin: 0 1rem;
         padding: 5px;

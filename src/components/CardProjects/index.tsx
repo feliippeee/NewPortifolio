@@ -9,13 +9,13 @@ interface ProjectsProps {
     height?: string;
     textSubtitle?: string;
     title: string;
-    subTitle: string;
+    text: string;
     link: string;
     linkProject: string;
 
 }
 
-export default function CardProjects({image, textSubtitle, title, subTitle, link, linkProject}: ProjectsProps) {
+export default function CardProjects({image, textSubtitle, title, text, link, linkProject}: ProjectsProps) {
     
     return (
         <AnimatePresence exitBeforeEnter>
@@ -33,7 +33,7 @@ export default function CardProjects({image, textSubtitle, title, subTitle, link
 
                 <Title>{title}</Title>
                 <SubTitle>
-                    {subTitle}
+                    {text}
                 </SubTitle>
                     
                 </DescriptionProject>
@@ -43,11 +43,11 @@ export default function CardProjects({image, textSubtitle, title, subTitle, link
                         <a target="_blank" rel="noopener noreferrer"><SiGithub /> Link do GitHub</a>
                     </Link>
                     </LinkGit>
-                    <LinkPage>
+                    <LinkGit>
                         <Link href={linkProject}>
                             <a target="_blank" rel="noopener noreferrer">Link Project</a>
                         </Link>
-                    </LinkPage>
+                    </LinkGit>
                 </Links>
             </Projects>
         </Container>
