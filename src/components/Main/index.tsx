@@ -298,10 +298,12 @@ export function Main() {
                     linkProject='https://github.com/feliippeee/ignews'
                 />
             </CardGrid>
-                    <a href="/">
+                <Link href="/">
+                    <a>
                         Carregar mais projetos
                         <FiChevronsDown />
                     </a>      
+                </Link>
         </CardGridProjects>
         </Content>
      </Container>
